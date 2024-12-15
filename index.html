@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monopoly Game</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="game.js" defer></script>
+
+</head>
+<body>
+<div class="game-container">
+    <div class="board">
+        <!-- Top row -->
+        <div class="tile special start" style="grid-column: 1; grid-row: 1;" id="0">
+            <span class="player-icon player1-icon">🧙🏽‍♂️</span>
+            <span class="player-icon player2-icon">🧞‍♂️</span>
+        </div>
+        <div class="tile property brown" style="grid-column: 2; grid-row: 1;" id="1">Mediterranean Avenue</div>
+        <div class="tile special" style="grid-column: 3; grid-row: 1;" id="2">Community Chest</div>
+        <div class="tile property brown" style="grid-column: 4; grid-row: 1;" id="3">Baltic Avenue</div>
+        <div class="tile tax" style="grid-column: 5; grid-row: 1;" id="4">Income Tax</div>
+        <div class="tile railroad" style="grid-column: 6; grid-row: 1;" id="5">Reading Railroad</div>
+        <div class="tile property" style="grid-column: 7; grid-row: 1;" id="6">Oriental Avenue</div>
+        <div class="tile special" style="grid-column: 8; grid-row: 1;" id="7">Chance</div>
+        <div class="tile property" style="grid-column: 9; grid-row: 1;" id="8">Vermont Avenue</div>
+        <div class="tile property" style="grid-column: 10; grid-row: 1;" id="9">Connecticut Avenue</div>
+        <div class="tile special jail" style="grid-column: 11; grid-row: 1;" id="10"></div>
+
+        <!-- Right column -->
+        <div class="tile property pink" style="grid-column: 11; grid-row: 2;" id="11">St. Charles Place</div>
+        <div class="tile utility" style="grid-column: 11; grid-row: 3;" id="12">Electric Company</div>
+        <div class="tile property pink" style="grid-column: 11; grid-row: 4;" id="13">States Avenue</div>
+        <div class="tile property pink" style="grid-column: 11; grid-row: 5;" id="14">Virginia Avenue</div>
+        <div class="tile property orange" style="grid-column: 11; grid-row: 6;" id="15">St. James Place</div>
+        <div class="tile property orange" style="grid-column: 11; grid-row: 7;" id="16">Tennessee Avenue</div>
+        <div class="tile property orange" style="grid-column: 11; grid-row: 8;" id="17">New York Avenue</div>
+
+        <!-- Bottom row -->
+        <div class="tile special parking" style="grid-column: 11; grid-row: 9;" id="18"></div>
+        <div class="tile property red" style="grid-column: 10; grid-row: 9;" id="19">Kentucky Avenue</div>
+        <div class="tile property red" style="grid-column: 9; grid-row: 9;" id="20">Indiana Avenue</div>
+        <div class="tile property red" style="grid-column: 8; grid-row: 9;" id="21">Illinois Avenue</div>
+        <div class="tile railroad" style="grid-column: 7; grid-row: 9;" id="22">B&O Railroad</div>
+        <div class="tile property yellow" style="grid-column: 6; grid-row: 9;" id="23">Atlantic Avenue</div>
+        <div class="tile property yellow" style="grid-column: 5; grid-row: 9;" id="24">Ventnor Avenue</div>
+        <div class="tile utility" style="grid-column: 4; grid-row: 9;" id="25">Water Works</div>
+        <div class="tile property yellow" style="grid-column: 3; grid-row: 9;" id="26">Marvin Gardens</div>
+        <div class="unused" style="grid-column: 2; grid-row: 9;" >Does not exist and not envolved in the game</div>
+        <div class="tile special jail2" style="grid-column: 1; grid-row: 9;" id="27"></div>
+
+        <!-- Left column -->
+        <div class="tile property green" style="grid-column: 1; grid-row: 8;" id="28">Pacific Avenue</div>
+        <div class="tile property green" style="grid-column: 1; grid-row: 7;" id="29">North Carolina Avenue</div>
+        <div class="tile property green" style="grid-column: 1; grid-row: 6;" id="30">Pennsylvania Avenue</div>
+        <div class="tile railroad" style="grid-column: 1; grid-row: 5;" id="31">Short Line</div>
+        <div class="tile property dark-blue" style="grid-column: 1; grid-row: 4;" id="32">Park Place</div>
+        <div class="tile tax" style="grid-column: 1; grid-row: 3;" id="33">Luxury Tax</div>
+        <div class="tile property dark-blue" style="grid-column: 1; grid-row: 2;" id="34">Boardwalk</div>
+    </div>
+
+    <div class="player-cards">
+        <div class="card player1">
+            <div class="player-info">
+                <span class="player-name">Player 1 🧙🏽‍♂️</span>
+                <span class="player-money">$5000</span>
+            </div>
+            <div class="player-properties"></div>
+            <div class="player-actions">
+                <button class="btn buy-house">Buy House</button>
+                <button class="btn buy-railroad">Buy Railroad</button>
+                <button class="btn buy-utility">Buy Utility</button>
+            </div>
+        </div>
+        <div class="card player2">
+            <div class="player-info">
+                <span class="player-name">Player 2 🧞‍♂️</span>
+                <span class="player-money">$5000</span>
+            </div>
+            <div class="player-properties">
+            </div>
+            <div class="player-actions">
+                <button class="btn buy-house">Buy House</button>
+                <button class="btn buy-railroad">Buy Railroad</button>
+                <button class="btn buy-utility">Buy Utility</button>
+            </div>
+        </div>
+        <button class="btn roll" id="rollDiceButton">🎲 Roll</button>
+    </div>
+</div>
+</body>
+</html>

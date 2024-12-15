@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    height: 100vh;
+}
+
+.game-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    width: 1000px;
+    height: 700px;
+    background-color: white;
+    border: 5px solid black;
+    gap: 5px;
+}
+
+.tile {
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    text-align: center;
+}
+.start {
+    background-image: url("https://cdn3.emoji.gg/emojis/7706-go.png");
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 80px;
+}
+.parking {
+    background-image: url("https://cdn3d.iconscout.com/3d/premium/thumb/car-parking-3d-icon-download-in-png-blend-fbx-gltf-file-formats--area-sign-lot-navigation-vol-2-pack-maps-and-icons-5602694.png?f=webp");
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 80px;
+}
+.jail {
+    background-image: url("https://64.media.tumblr.com/b27035f325c3516ad0b8231ec252dd58/e20e694e333496d0-21/s500x750/e6744a1c1e0670d4b20782f8e53048a8d50d3ed8.pnj");
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 80px;
+}
+.jail2 {
+    background-image: url("https://i.pinimg.com/564x/50/19/44/50194427cfd191b02d480f038abfa9fb.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 80px;
+}
+.special {
+    background-color: #f8d7da;
+}
+
+.property {
+    background-color: #e9ecef;
+}
+
+.property.brown {
+    border-top: 10px solid #964B00;
+}
+
+.property[style*="light blue"] {
+    border-top: 10px solid #add8e6;
+}
+
+.property.pink {
+    border-top: 10px solid #ffc0cb;
+}
+
+.property.orange {
+    border-top: 10px solid #ffa500;
+}
+
+.property.red {
+    border-top: 10px solid #ff0000;
+}
+
+.property.yellow {
+    border-top: 10px solid #ffff00;
+}
+
+.property.green {
+    border-top: 10px solid #008000;
+}
+
+.property.dark-blue {
+    border-top: 10px solid #00008b;
+}
+
+.railroad {
+    background-color: #e0e0e0;
+}
+
+.utility {
+    background-color: #fef9c3;
+}
+
+.tax {
+    background-color: #f8c8dc;
+}
+
+.unused {
+    background-color: #a69f95;
+    text-align: center;
+}
+
+.player-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    height: auto;
+    border: 2px solid black;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.player-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.player-properties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    min-height: 100px;
+}
+
+.property-tile {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.player-actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.tile.special.start {
+    position: relative; /* Allow absolute positioning of the icons */
+    background-image: url("https://cdn3.emoji.gg/emojis/7706-go.png");
+    background-size: cover;
+    background-position: center;
+    width: 100px;
+    height: 80px;
+}
+
+.player-icon {
+    position: absolute;
+    font-size: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1; /* Make sure the icons are on top of the background */
+}
+
+.player1-icon {
+    left: 10px; /* Position the first player icon to the left */
+}
+
+.player2-icon {
+    right: 10px; /* Position the second player icon to the right */
+}
+
+.card.active {
+    border-color: gold;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+.btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.buy-house {
+    background-color: #28a745;
+}
+
+.buy-house:hover {
+    background-color: #218838;
+}
+
+.buy-railroad {
+    background-color: #dc3545;
+}
+
+.buy-railroad:hover {
+    background-color: #c82333;
+}
+/* Styling for the roll button */
+.roll {
+    background-color: #ffc107;  /* Yellow color */
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.roll:hover {
+    background-color: #e0a800;
+}
+
+.roll span {
+    font-size: 2rem;
+}
+
